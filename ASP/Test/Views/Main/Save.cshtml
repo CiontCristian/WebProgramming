@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+@{
+    String username = (String) Session["user"];
+    if (username == null)
+    {
+        Response.Redirect("/Main");
+    }
+    {
+        <p>Welcome @username</p>
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Save</title>
+    <style>
+        .container-add{
+            background-color: lightgray;
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+            height: 200px;
+        }
+        
+        input{
+            background-color: lightcoral;
+            border: 2px solid black;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-add">
+    <form action="SaveBook" method="get">
+        Titlu: <input type="text" name="inputTitle_insert" placeholder="Book Title:"><br>
+        Autor: <input type="text" name="inputAuthor_insert" placeholder="Book Author:"><br>
+        Nr. Pagini: <input type="text" name="inputPages_insert" placeholder="Book Pages:"><br>
+        Pret: <input type="text" name="inputPrice_insert" placeholder="Book Price:"><br>
+        <input type="submit" id="buttonInsert" value="Adauga Carte">
+    </form>
+</div>
+</body>
+</html>

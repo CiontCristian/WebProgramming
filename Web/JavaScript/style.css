@@ -1,0 +1,14 @@
+
+#table{
+    width: 25%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table, tr, th, td{
+   border: 2px solid black;
+}
+
+#edit{
+    width: 20%;
+}

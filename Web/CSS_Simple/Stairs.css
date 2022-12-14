@@ -1,0 +1,51 @@
+.stair-top1 {
+    position:absolute;
+    background: saddlebrown;
+    border: 1px solid black;
+    z-index: 1;
+    left: 500px;
+    top: 100px;
+    width: 200px;
+    height: 50px;
+    transform: rotate(20deg) skewX(-40deg);
+    box-shadow: 50px 40px 5px 5px grey;
+
+}
+
+.stair-front1 {
+    position:absolute;
+    background: saddlebrown;
+    border: 1px solid black;
+    z-index: 2;
+    left:475px;
+    top: 142px;
+    width: 190px;
+    height: 50px;
+    transform: skewY(20deg);
+    box-shadow: 2px 38px 5px 5px grey;
+}
+
+.stair-top2{
+    position:absolute;
+    background: saddlebrown;
+    border: 1px solid black;
+    z-index: 3;
+    left: 440px;
+    top: 184px;
+    width: 200px;
+    height: 50px;
+    transform: rotate(20deg) skewX(-40deg);
+    box-shadow: 55px 43px 5px 5px grey;
+}
+
+.stair-front2{
+    position:absolute;
+    background: saddlebrown;
+    border: 1px solid black;
+    z-index: 4;
+    left:416px;
+    top: 227px;
+    width: 190px;
+    height: 50px;
+    transform: skewY(20deg);
+}

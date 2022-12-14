@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="script.js"></script>
+    <script src="jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <form action="LoginController" method="post">
+        Enter email : <input type="text" name="email"> <BR>
+        Enter password : <input type="password" name="password"> <BR>
+        <input type="submit" value="Login"/>
+    </form>
+    <p>No account? Sign Up
+        <button type="button" id="signUpButton" onclick=redirectToSignUp()>Sign Up</button>
+    </p>
+</body>
+</html>

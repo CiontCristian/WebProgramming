@@ -1,0 +1,373 @@
+body{
+    font-family: "Source Code Pro", sans-serif;
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+
+.top-bar{
+    top: 0;
+    background-color: #333333;
+    color: #bbb;
+    border-bottom: 1px solid darkgreen;
+    margin: 0 auto;
+    padding: 0;
+    height: 45px;
+}
+
+.top-bar ul{
+    text-align: left;
+    min-width: 58.75em;
+    width: 63%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    height: auto;
+    border: 0;
+
+}
+
+.top-bar li{
+    float: left;
+    width: 16.6666667%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 4px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    font-size: medium;
+}
+
+.top-bar li:hover{
+    color: white;
+}
+
+header{
+    background-color: rgb(43, 91, 132);
+}
+
+.middle{
+    height: 562px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 63%;
+    min-width: 58.75em;
+}
+
+.logo-bar{
+    padding: 5px 5px 15px 5px;
+    height: 100px;
+    min-width: 58.75em;
+}
+
+.search-bar{
+    display: inline;
+    float: right;
+    line-height: inherit;
+    height: 60px;
+
+    background-color: #1e2933;
+    border-radius: 6px;
+    margin-top: 0px;
+    width: 39%;
+}
+
+.test{
+    width: 60%;
+}
+
+.python-logo{
+    display: inline;
+    width: 250px;
+    height: 65px;
+    float: left;
+    margin: 2em 0 .5em;
+}
+
+.donate-button{
+    display: inline;
+    position: relative;
+    top: 45px;
+
+    padding: .4em .75em .35em;
+    background-image: linear-gradient(#ffdf76 10%,#ffd343 90%);
+    border: 1px solid #dca900;
+    font-size: 100%;
+    font-family: inherit;
+    float: right;
+    border-radius: 6px;
+}
+
+.go-button{
+    background-image: linear-gradient(#3776ab 10%,#2b5b84 90%);
+    padding: 6.4px 12px 6px;
+    border: 1px solid #2b5b84;
+    margin-right: 4px;
+    font-family: inherit;
+    border-radius: 6px;
+    position: relative;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    color: #bbb;
+    white-space: nowrap;
+}
+
+.search-logo{
+    height: 60px;
+    margin:0 .125em .25em;
+    display: inline;
+    position: relative;
+    float: left;
+}
+
+.label{
+    height: 30px;
+    width: 18em;
+    padding: .4em .5em .3em;
+    margin: 7px 10px 7px -25px
+}
+
+.navigation-bar{
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    font-size: 1.125em;
+    color: #d4d4d4;
+    overflow: visible;
+    background-color: #2d618c;
+    background-image: linear-gradient(#3776ab 30%,#2d618c 95%);
+    border-top: 1px solid #629ccd;
+    border-bottom: 1px solid #18334b;
+    margin-bottom: 1px;
+}
+
+.navigation-bar ul{
+    text-align: left;
+    max-width: 75em;
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+    white-space: nowrap;
+    min-width: 32.5em;
+    list-style: none;
+    height: 50px;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.navigation-bar li{
+    width:14%;
+    border-right: 1px solid rgba(0,0,0,0.26);
+    display: inline-block;
+    text-align: center;
+    height: 33px;
+    padding-top: 15px;
+
+}
+
+.navigation-bar li:hover{
+    color: white;
+}
+
+.box{
+    height: 280px;
+    margin: 0 auto;
+    width: 80%;
+    display: table;
+    clear: both;
+}
+
+.left-box{
+    float: left;
+    background-color: #18222A;
+    display: inline;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    margin-left: -40px;
+    margin-top: -1px;
+    font-size: medium;
+}
+
+.code{
+    float: left;
+    margin-top: 20px;
+    width: 75%;
+
+}
+
+.code br{
+    line-height: 175%;
+}
+
+.shell-button{
+    float: right;
+    width: 25%;
+    height: 100%;
+}
+
+.shell-button button{
+    background-color: #dca900;
+    background-image: linear-gradient(#ffdf76 10%,#ffd343 90%);
+    border: 1px solid #dca900;
+    font-size: 100%;
+    font-family: inherit;
+    margin-top: 20px;
+    margin-left: 60px;
+    padding-top: 20px;
+    padding-right: 20px;
+    border-radius: 6px;
+}
+
+.right-box{
+    float: right;
+    background-color: #1C3B55;
+    width: 50%;
+    height: 100%;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    margin-top: -1px;
+}
+
+.right-box-text{
+    text-align: left;
+    width:100%;
+    height: 65%;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.right-box-list{
+    width: 100%;
+    height: 25%;
+    position: relative;
+    margin-left: -20px;
+}
+
+.introduction{
+    font-family: inherit;
+    color: #fff;
+}
+
+.introduction > p{
+    line-height: 1.4em;
+    color:#caccce;
+    font-size: 1.25em;
+}
+
+.right-box-list > ol{
+    position: absolute;
+    width: 50%;
+    max-width: 30.75em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-left: 25%;
+}
+
+.right-box-list > ol > li{
+    display: inline-block;
+    opacity: 0.7;
+    background-image: linear-gradient(#3776ab 10%,#2b5b84 90%);
+    border: 1px solid #3d83be;
+    color: #A5B8CA;
+    text-shadow: none;
+    background-color: #2b5b84;
+    font-weight: normal;
+    margin-bottom: .4375em;
+    padding: .4em .75em .35em;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.right-box-list > ol > li:hover{
+    color: white;
+}
+
+.bottom{
+    clear: both;
+    background-color: white;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.bottom-up{
+    height: 50%;
+    margin: 0 auto;
+}
+
+.info{
+    margin-top: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 22%;
+    height: 100%;
+    padding-top: -50px;
+    margin-right: 2%;
+    display: inline-table;
+    border-top: 4px solid #75a8d3;
+    box-sizing: border-box;
+}
+
+.info > p > span{
+    position: relative;
+    margin-left: 30px;
+}
+
+.bottom-down{
+    height: 50%;
+    margin: 0 auto;
+}
+
+.info2{
+    margin-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 45%;
+    height: 100%;
+    padding-top: 0px;
+    position: relative;
+    margin-right: 2%;
+    display: inline-table;
+    border-top: 4px solid #75a8d3;
+}
+
+.info2 > ul{
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.info2 > ul > li> p{
+    position: absolute;
+    left: 0;
+    margin-right: 3px;
+    margin-top: 0px;
+}
+
+.info2 > ul > li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #caccce;
+    position: relative;
+    padding-left: 110px;
+}
+
+.info2 > p > span{
+    position: relative;
+    margin-left: 33px;
+}
+
+.more{
+    left:470px;
+    top: 5px;
+    position: absolute;
+    color: gray;
+}

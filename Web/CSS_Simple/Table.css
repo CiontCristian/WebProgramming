@@ -1,0 +1,47 @@
+body{
+    background-color: aliceblue;
+    color: darkred;
+}
+
+table, th, td{
+    border: 1px solid black;
+    padding: 10px;
+    height: 20px;
+    text-align-all: center;
+    vertical-align: center;
+}
+
+table{
+    margin: auto;
+    background-color: bisque;
+}
+
+.collapse td{
+    animation: show 0.5s forwards;
+}
+
+.collapse:hover td{
+    animation: hide 0.5s forwards;
+}
+
+@keyframes show {
+    from{
+        height: 0px;
+        visibility: collapse;
+    }
+    to{
+        height: 20px;
+        visibility: visible;
+    }
+}
+
+@keyframes hide {
+    from{
+        height: 20px;
+        visibility: visible;
+    }
+    to{
+        height: 0px;
+        visibility: collapse;
+    }
+}

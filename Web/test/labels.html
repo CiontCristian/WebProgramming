@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function test() {
+            const path = document.getElementById("fileInput");
+            document.getElementById("main").innerHTML = path.value;
+            document.getElementById("link").href = path.value;
+            document.getElementById("embed").src = path.value;
+        }
+    </script>
+</head>
+<body>
+
+    <input type="file" value="Upload" id="fileInput">
+    <input type="button" value="Submit" onclick="test()">
+    <a href="E:\FACULTATE\AN 2\SEMESTRU 4\Web\Lab\Web\test\UploadTest.pdf" id="link">Link</a>
+
+    <span id="main">
+
+    </span>
+</body>
+</html>

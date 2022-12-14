@@ -1,0 +1,164 @@
+﻿@using ASP.Models;
+@{
+    Layout = null;
+}
+@{
+    String username = (String) Session["user"];
+    if (username == null)
+    {
+        Response.Redirect("/Main");
+    }
+    {
+        <p>Welcome @username</p>
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Get Students</title>
+    
+    <style>
+        .selected{
+        background-color: lightcoral;
+        }
+        .container{
+            background-color: lightgray;
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+            height: 400px;
+        }
+        
+        .container-top{
+            width: 100%;
+            height: 80%;
+        }
+        input{
+            background-color: lightcoral;
+            border: 2px solid black;
+            margin:5px;
+        }
+        table{
+            border: 2px solid black;
+            width: 100%;
+        }
+        #maindiv{
+            float: left;
+            width: 75%;
+        }
+        
+        #updateForm{
+            float: right;
+            width: 20%;
+        }
+        
+        .container-bottom{
+            height: 10%;
+        }
+        
+        form{
+            float: left;
+        }
+        
+        
+    </style>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        var currentTitle;
+        var currentBook = [];
+        
+        $(document).ready(function () {
+        
+            $(function(){
+                $("#maindiv").on('click', 'tbody > tr', function(){
+                    $(this).addClass("selected").siblings().removeClass("selected");
+                    currentTitle = $(this).children().first().text();
+                 
+                    var children = $(this).children();
+                    for(var i = 0;i < children.length;i++){
+                        currentBook[i] = children.eq(i).text();
+                    }
+                    
+                    $("#currentTitle").val(currentTitle);                 
+                    $("#currentLender").val(currentTitle);
+                    $("#titleDelete").val(currentTitle);
+                    $("#inputTitle_update").val(currentBook[0]);
+                    $("#inputAuthor_update").val(currentBook[1]);
+                    $("#inputPages_update").val(currentBook[2]);
+                    $("#inputPrice_update").val(currentBook[3]);
+                });
+                
+                
+            });
+        
+        });
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="container-top">
+        <h2>Books:</h2>
+        <div id="maindiv">
+            @{
+                List<Book> books = (List<Book>) ViewData["bookList"];
+            }
+            <table>
+                <thead>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Price</th>
+                    <th>Lender</th>
+                </thead>
+                <tbody>
+                @foreach (Book book in books)
+                {
+                    <tr>
+                        <td>@book.title</td>
+                        <td>@book.author</td>
+                        <td>@book.pages</td>
+                        <td>@book.price</td>
+                        <td>@book.lender</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+        <form action="UpdateBook" method="get" id="updateForm">
+            <input type="hidden" name="currentTitle" value="" id="currentTitle"/>
+            Book Title: <input type="text" name="inputTitle_update" id="inputTitle_update" value=""><br>
+            Book Author: <input type="text" name="inputAuthor_update" id="inputAuthor_update" value=""><br>
+            Book Pages: <input type="text" name="inputPages_update" id="inputPages_update" value=""><br>
+            Book Price: <input type="text" name="inputPrice_update" id="inputPrice_update" value=""><br>
+            <input type="submit" id="buttonUpdate" value="Update">
+        </form>
+    </div>
+
+    <div class="container-bottom">
+        <form action="Logout" method="get">
+            <input type="submit" value="Logout">
+        </form>
+        <form action="GoToSaveBook" method="get">
+            <input type="submit" value="Save Book">
+        </form>
+        <form action="DeleteBook" method="get">
+            <input type="hidden" name="titleDelete" value="" id="titleDelete"/>
+            <input type="submit" value="Delete Book"/>
+        </form>
+        <form action="LendBook" method="get">
+            <input type="hidden" name="currentTitle" value="" id="currentLender"/>
+            <input type="submit" id="buttonLend" value="Lend">
+        </form>
+        <form action="GoToFilter" method="get">
+            <input type="submit" value="Filter"/>
+        </form>
+        
+    </div>
+</div>
+<br/>
+</body>
+</html>

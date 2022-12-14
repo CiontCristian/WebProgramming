@@ -1,0 +1,64 @@
+﻿
+@{
+    Layout = null;
+}
+@{
+    String username = (String) Session["user"];
+    if (username == null)
+    {
+        Response.Redirect("/Main");
+    }
+    {
+        <p>Welcome @username</p>
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Filter</title>
+    <style>
+        .container-filter{
+            background-color: lightgray;
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+            height: 200px;
+        }
+        input{
+            background-color: lightcoral;
+            border: 2px solid black;
+            margin:5px;
+        }
+    </style>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        var previousFilter = "No Filter";
+      
+        $(document).ready(function(){
+            $("#filterButton").click(function() {
+               $("#prevFilter").html(previousFilter);
+                previousFilter=$("#inputFilter").val()
+                
+                $.ajax({url: 'FilterBooks',
+                            type: 'GET',
+                            data:{inputFilter: $("#inputFilter").val()},
+                            success: function (data) {
+                               $("#filterdiv").html(data);
+                            }
+                        });
+            });
+            
+        });
+    </script>
+</head>
+<body>
+<div class="container-filter">
+    <b><p id="prevFilter">No Filter</p></b>
+    <b>Book Author:</b> <input type="text" id="inputFilter" name="inputFilter" placeholder="Book Author:">
+    <input type="button" id="filterButton" value="Filter"/>
+    <div id="filterdiv"></div>
+</div>
+</body>
+</html>

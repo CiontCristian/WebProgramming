@@ -1,0 +1,22 @@
+.container{
+    background-color: lightgray;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 800px;
+}
+
+input, button{
+    background-color: lightcoral;
+    border: 2px solid black;
+    margin:5px;
+}
+
+hr{
+    border: 1px solid black;
+}
+
+ul li {
+    background: #cce5ff;
+    margin: 5px;
+}

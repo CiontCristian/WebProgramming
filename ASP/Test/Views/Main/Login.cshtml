@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        .container-login{
+            background-color: lightgray;
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+            height: 150px;
+        }
+        input{
+            background-color: lightcoral;
+            border: 2px solid black;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-login">
+        <form action="Main/Login" method="post">
+            ID Utilizator : <input type="text" name="usernameLogin"> <BR>
+            Parola : <input type="password" name="passwordLogin"> <BR>
+            <input type="submit" value="Logare" />
+        </form>
+        <form action="Main/GoToRegister" method="get">
+        Nu aveti cont? <input type="submit" value="Inregistrare">
+        </form>
+    </div>
+</body>
+</html>
